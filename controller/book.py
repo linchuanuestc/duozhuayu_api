@@ -4,7 +4,6 @@ from sqlalchemy.orm.exc import NoResultFound
 from sqlalchemy import exc
 import utils.util
 import utils.constants
-import sys
 import time
 
 #通过bookid批量查询用户信息
