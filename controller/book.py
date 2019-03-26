@@ -20,7 +20,7 @@ class GetBooksHandler(BaseHandler):
                 book_infos.append(utils.util.row_convert_dict(user))
             self.finish({"books": book_infos})
         except NoResultFound:    
-            self.finish({}, utils.constants.ERR_NO_USER)
+            self.finish({}, utils.constants.ERR_NO_BOOK)
         except exc.SQLAlchemyError as e:
             self.finish({}, utils.constants.ERR_DB)
         except: 
