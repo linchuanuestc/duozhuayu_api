@@ -6,7 +6,7 @@ import utils.util
 import utils.constants
 import time
 
-#通过bookid批量查询用户信息
+#通过bookid批量查询书籍信息
 class GetBooksHandler(BaseHandler):
     def post(self):
         try:
