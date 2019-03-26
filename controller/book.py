@@ -16,7 +16,7 @@ class GetBooksHandler(BaseHandler):
             books = Book.by_ids(ids)
             book_infos = [] 
             for book in books:
-                book_infos.append(utils.util.row_convert_dict(user))
+                book_infos.append(utils.util.row_convert_dict(book))
             self.finish({"books": book_infos})
         except NoResultFound:    
             self.finish({}, utils.constants.ERR_NO_BOOK)
