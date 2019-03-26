@@ -16,7 +16,7 @@ class GetUserHandler(BaseHandler):
             self.finish({"user":utils.util.row_convert_dict(user)})
         except NoResultFound:    
             self.finish({}, utils.constants.ERR_NO_USER)
-        except exc.SQLAlchemyError as e:
+        except exc.SQLAlchemyError:
             self.finish({}, utils.constants.ERR_DB)
         except: 
             self.finish({}, utils.constants.ERR_UNKNOWN)

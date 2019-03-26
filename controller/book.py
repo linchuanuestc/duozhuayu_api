@@ -20,7 +20,7 @@ class GetBooksHandler(BaseHandler):
             self.finish({"books": book_infos})
         except NoResultFound:    
             self.finish({}, utils.constants.ERR_NO_BOOK)
-        except exc.SQLAlchemyError as e:
+        except exc.SQLAlchemyError:
             self.finish({}, utils.constants.ERR_DB)
         except: 
             self.finish({}, utils.constants.ERR_UNKNOWN)
