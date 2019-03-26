@@ -27,5 +27,5 @@ class Book(Base):
         return session.query(cls).filter(cls.bid.in_(ids)).all()
 
     def add_book(self, book):
-        session.add(person)
+        session.add(book)
         session.commit()
